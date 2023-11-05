@@ -6,6 +6,7 @@ import Home from '../Home/Home/Home';
 import Login from '../Login/Login';
 import Register from '../Login/Register';
 import About from '../Home/About/About';
+import Contact from '../Home/About/Contact';
 
 const router = createBrowserRouter([
     {
@@ -28,6 +29,10 @@ const router = createBrowserRouter([
         {
           path:'/about',
           element:<About></About>
+        },
+        {
+          path:'/contact',
+          element:<Contact></Contact>
         }
       ]
     },

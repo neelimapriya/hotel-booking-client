@@ -15,8 +15,8 @@ const Navbar = () => {
         </NavLink>
       </li>
       <li>
-        <NavLink className="hover:bg-gray-500 font-serif" to="/about">
-          About
+        <NavLink className="hover:bg-gray-500 font-serif" to="/login">
+          Gallary
         </NavLink>
       </li>
       <li>
@@ -24,9 +24,10 @@ const Navbar = () => {
           My Bookings
         </NavLink>
       </li>
+      
       <li>
-        <NavLink className="hover:bg-gray-500 font-serif" to="/login">
-          Gallary
+        <NavLink className="hover:bg-gray-500 font-serif" to="/contact">
+          Contact
         </NavLink>
       </li>
     </>
@@ -54,14 +55,14 @@ const Navbar = () => {
             </label>
             <ul
               tabIndex={0}
-              className="menu menu-sm dropdown-content mt-3 z-[1] p-2 shadow bg-base-100 text-black rounded-box w-52"
+              className="menu menu-sm dropdown-content  z-[1] px-2 space-y-5 shadow bg-black text-white mt-52  w-24"
             >
               {navLinks}
             </ul>
           </div>
          <div className='flex items-center'>
             <img className='w-10' src={logo} alt="" />
-         <a className="font-serif hover:underline  cursor-pointer font-semibold text-xl">Lartisien</a>
+         <a className="font-serif hover:underline  cursor-pointer font-semibold text-2xl ml-3">Lartisien</a>
          </div>
         </div>
         
@@ -99,7 +100,8 @@ const Navbar = () => {
           
         </div>
       </div>
-      <div className=" border border-t-orange-700 justify-center hidden lg:flex">
+      <hr className='max-w-7xl mx-auto' />
+      <div className="  justify-center hidden lg:flex">
           <ul className="menu menu-horizontal px-1">
             {navLinks}
           </ul>

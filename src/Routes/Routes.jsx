@@ -7,6 +7,7 @@ import Login from '../Login/Login';
 import Register from '../Login/Register';
 import About from '../Home/About/About';
 import Contact from '../Home/About/Contact';
+import Rooms from '../Rooms/Rooms';
 
 const router = createBrowserRouter([
     {
@@ -33,6 +34,11 @@ const router = createBrowserRouter([
         {
           path:'/contact',
           element:<Contact></Contact>
+        },
+        {
+          path:'/room',
+          element:<Rooms></Rooms>,
+          loader:()=>fetch('http://localhost:5000/room')
         }
       ]
     },

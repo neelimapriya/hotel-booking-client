@@ -1,3 +1,4 @@
+import { AiOutlineArrowRight } from 'react-icons/ai';
 const Contact = () => {
   return (
     <div className="mt-20 p-5 flex flex-col md:flex-row max-w-5xl mx-auto text-black font-serif">
@@ -8,7 +9,9 @@ const Contact = () => {
         <h2 className="text-2xl font-semibold">+44 20 3519 2700</h2>
         <p className="text-base mb-3">Book online or call</p>
         <h2 className="text-2xl font-semibold">contact@lartisien.com</h2>
-        <p className="text-base mb-3">Send us an email or use contact form</p>
+        <div className='flex items-center '>
+        <p className="text-base mb-3">Send us an email or use contact form</p><AiOutlineArrowRight className='text-xl ml-2 text-black'></AiOutlineArrowRight>
+        </div>
         <h2 className="text-2xl font-semibold">Our address</h2>
         <p className="text-base mb-3">
           Grand Luxury. 228 Rue de Rivoli. Paris, 75002, FR · G.L.H Services ltd

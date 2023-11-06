@@ -6,7 +6,7 @@ import { AuthContext } from "../Provider/AuthProvider";
 
 const Rooms = () => {
   //   const [roomData, setRoomData] = useState();
-  const [price, setPrice] = useState();
+  const [price, setPrice] = useState(1);
   const { loading } = useContext(AuthContext);
   const axios = useAxios();
 

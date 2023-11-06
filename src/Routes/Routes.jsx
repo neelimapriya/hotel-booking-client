@@ -8,6 +8,7 @@ import Register from '../Login/Register';
 import About from '../Home/About/About';
 import Contact from '../Home/About/Contact';
 import Rooms from '../Rooms/Rooms';
+import RoomDetails from '../Rooms/RoomDetails';
 
 const router = createBrowserRouter([
     {
@@ -38,7 +39,13 @@ const router = createBrowserRouter([
         {
           path:'/room',
           element:<Rooms></Rooms>,
-          loader:()=>fetch('http://localhost:5000/room')
+          // loader:()=>fetch('http://localhost:5000/room')
+        },
+        {
+          path:'/room/:id',
+          element:<RoomDetails></RoomDetails>,
+          loader: ({ params }) =>
+          fetch(`http://localhost:5000/api/v1/room/${params.id}`),
         }
       ]
     },

@@ -10,7 +10,7 @@ const Contact = () => {
         <p className="text-base mb-3">Book online or call</p>
         <h2 className="text-2xl font-semibold">contact@lartisien.com</h2>
         <div className='flex items-center '>
-        <p className="text-base mb-3">Send us an email or use contact form</p><AiOutlineArrowRight className='text-xl ml-2 text-black'></AiOutlineArrowRight>
+        <p className="text-base mb-3">Send us an email or use contact form</p><AiOutlineArrowRight className='text-xl ml-2 '></AiOutlineArrowRight>
         </div>
         <h2 className="text-2xl font-semibold">Our address</h2>
         <p className="text-base mb-3">

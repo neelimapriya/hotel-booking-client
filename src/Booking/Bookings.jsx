@@ -6,7 +6,8 @@ import { Link } from "react-router-dom";
 import { FaArrowLeft } from "react-icons/fa";
 import BookingCard from "./BookingCard";
 import Swal from "sweetalert2";
-const Bookings = () => {
+
+export const Bookings = () => {
   const { User } = useContext(AuthContext);
   const email = User?.email;
   console.log(email);
@@ -20,6 +21,9 @@ const Bookings = () => {
     },
   });
   console.log(bookings?.data);
+  
+
+
 
   //    delete operation
   const queryClient = useQueryClient();
@@ -41,7 +45,10 @@ const Bookings = () => {
       <div>
         {bookings?.data?.length == 0 && (
           <div>
-            <h2>Your Bookings is empty.</h2>
+           
+           <h2 className="bg-orange-800 text-3xl font-serif text-center text-white py-3 ">
+        Your Bookings : {bookings?.data?.length} Room
+      </h2>
             <div className="flex justify-center mt-5 items-center gap-2 underline underline-offset-1">
               <FaArrowLeft></FaArrowLeft>
               <Link to="/room"> You can visit our available Rooms! </Link>
@@ -49,9 +56,12 @@ const Bookings = () => {
           </div>
         )}
       </div>
-      <h2 className="bg-orange-800 text-3xl font-serif text-center text-white py-3 ">
+      {
+        bookings?.data?.length !== 0 && (<h2 className="bg-orange-800 text-3xl font-serif text-center text-white py-3 ">
         Your Bookings : {bookings?.data?.length} Rooms
-      </h2>
+      </h2>)
+      }
+      
       <div className="grid grid-cols-2 md:grid-cols-3 lg:grid-cols-4 gap-1 max-w-6xl mx-auto">
         {bookings?.data?.map((books) => (
           <BookingCard

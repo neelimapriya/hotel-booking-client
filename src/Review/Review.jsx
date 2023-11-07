@@ -1,10 +1,16 @@
-import  { useRef, useState } from 'react';
+
 import { Swiper, SwiperSlide } from 'swiper/react';
 import 'swiper/css';
 import 'swiper/css/pagination';
 import { Pagination } from 'swiper/modules';
 
+
 const Review = () => {
+ 
+  
+
+
+
     return (
         <div className='max-w-5xl mx-auto'>
             <h2>Review</h2>

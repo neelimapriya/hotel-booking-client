@@ -5,7 +5,7 @@ import { useMutation, useQueryClient } from "@tanstack/react-query";
 import axios from "axios";
 import { Link } from "react-router-dom";
 
-const BookingCard = ({ books, mutate }) => {
+export const BookingCard = ({ books, mutate }) => {
   const { img1, price, size, title, checkin, checkout, _id } = books;
 
   return (

@@ -12,6 +12,7 @@ import RoomDetails from '../Rooms/RoomDetails';
 import Bookings from '../Booking/Bookings';
 import Gallary from '../Gallary/Gallary';
 import Update from '../Booking/Update';
+import SingleRoomReview from '../Rooms/SingleRoomReview';
 
 const router = createBrowserRouter([
     {
@@ -64,6 +65,11 @@ const router = createBrowserRouter([
           loader: ({ params }) =>
             fetch(`http://localhost:5000/Booking/${params.id}`),
         },
+        {
+          path:'/review/:code',
+          element:<SingleRoomReview></SingleRoomReview>,
+          // loader:({params})=>fetch(`http://localhost:5000/reviewItem/${params.code}`)
+        }
       ]
     },
   ]);

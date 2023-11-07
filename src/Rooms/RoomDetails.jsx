@@ -4,10 +4,13 @@ import moment from 'moment';
 
 
 import { DatePicker } from 'antd';
-import { useContext, useState } from "react";
+import { useContext, useEffect, useState } from "react";
 import RoomReview from "./RoomReview";
 import { AuthContext } from "../Provider/AuthProvider";
 import Swal from "sweetalert2";
+import useAxios from "../hooks/useAxios";
+import { useQuery } from "@tanstack/react-query";
+import SingleRoomReview from "./SingleRoomReview";
 
 const RoomDetails = () => {
   const {User}=useContext(AuthContext)
@@ -18,7 +21,7 @@ const RoomDetails = () => {
   const [checkout, setCheckout]=useState()
 
   const loadedData = useLoaderData();
-  console.log(loadedData);
+  // console.log(loadedData);
   const {
     availability,
     description,
@@ -29,9 +32,11 @@ const RoomDetails = () => {
     price2,
     size,
     title,
+    code
   } = loadedData;
+ 
 
-  console.log(checkin)
+  console.log(code)
   console.log(checkout)
   const filterDate=(dates)=>{
     console.log(moment(dates[0]).format('DD-MM-YYYY'))
@@ -39,7 +44,7 @@ const RoomDetails = () => {
     setCheckin(moment(dates[0]).format('DD-MM-YYYY'))
     setCheckout(moment(dates[1]).format('DD-MM-YYYY'))
   }
-const object={img1, price,size, title,checkin, checkout,email}
+const object={img1, price,size, title,checkin, checkout,email, code}
   const handleAddBooking=()=>{
     fetch('http://localhost:5000/api/v1/user/create-bookings',{
             method:'POST',
@@ -65,15 +70,14 @@ const object={img1, price,size, title,checkin, checkout,email}
                 'error'
               )
             }
-            if(data.insertedId){
-              const Available = availability-1
-              return Available
-            }
+           
         })
+
        
-        
 
   }
+
+   
 
   return (
     <div className="mt-5 mb-20">
@@ -137,7 +141,8 @@ const object={img1, price,size, title,checkin, checkout,email}
        <div className=" flex justify-center mx-auto">
        <button  onClick={handleAddBooking} className="btn bg-black text-white hover:bg-slate-600 w-2/4 mx-auto">Book</button>
        </div>
-     <RoomReview></RoomReview>
+     <RoomReview title={title} code={code}></RoomReview>
+    
     </div>
   );
 };

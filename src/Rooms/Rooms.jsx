@@ -6,7 +6,7 @@ import { AuthContext } from "../Provider/AuthProvider";
 
 const Rooms = () => {
   //   const [roomData, setRoomData] = useState();
-  const [price, setPrice] = useState(1);
+  const [price, setPrice] = useState('');
   const { loading } = useContext(AuthContext);
   const axios = useAxios();
 
@@ -17,8 +17,12 @@ const Rooms = () => {
     return res;
   };
 
-  const { data, isLoading, isError, error } = useQuery({
-    queryKey: ["room", price],
+  const { data,
+     isLoading, 
+     isError,
+      error }
+       = useQuery({
+    queryKey: ['room', price],
     queryFn: getRooms,
   });
 
@@ -28,7 +32,7 @@ const Rooms = () => {
     return loading;
   }
   if (isError) {
-    return <p>Error Found: {error}</p>;
+    return 
   }
 
   console.log(price);
@@ -49,7 +53,7 @@ const Rooms = () => {
         <select
           className="input input-bordered"
           onChange={(e) => setPrice(e.target.value)}
-          id=""
+         
         >
           <option disabled selected>
             Choose One

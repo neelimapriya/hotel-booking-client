@@ -14,7 +14,9 @@ const Home = () => {
            <Rooms></Rooms>
            <Review></Review>
            <About></About>
-           <NewsLetter></NewsLetter>
+           <div className='mt-32'>
+           <NewsLetter></NewsLetter> 
+           </div>
            <Contact></Contact>
            <Footer></Footer>
         </div>

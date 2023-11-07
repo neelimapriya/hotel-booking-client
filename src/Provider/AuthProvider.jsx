@@ -10,6 +10,7 @@ import {
   signInWithPopup,
   createUserWithEmailAndPassword,
 } from "firebase/auth";
+import axios from "axios";
 
 export const AuthContext = createContext(null);
 const auth = getAuth(app);
@@ -37,7 +38,14 @@ const AuthProvider = ({children}) => {
   };
   useEffect(() => {
     const unSubscribe = onAuthStateChanged(auth, (currentUser) => {
+
       setUser(currentUser);
+      if(currentUser){
+        const loggedUser={email:currentUser.email}
+        axios.post('http://localhost:5000/api/v1/auth/access-token', loggedUser,{
+          withCredentials:true
+        }).then(res=>console.log(res))
+      }
       setLoading(false);
     });
     return () => {

@@ -11,6 +11,7 @@ import Rooms from '../Rooms/Rooms';
 import RoomDetails from '../Rooms/RoomDetails';
 import Bookings from '../Booking/Bookings';
 import Gallary from '../Gallary/Gallary';
+import Update from '../Booking/Update';
 
 const router = createBrowserRouter([
     {
@@ -56,7 +57,13 @@ const router = createBrowserRouter([
           element:<RoomDetails></RoomDetails>,
           loader: ({ params }) =>
           fetch(`http://localhost:5000/api/v1/room/${params.id}`),
-        }
+        },
+        {
+          path: "/update/:id",
+          element:<Update></Update>,
+          loader: ({ params }) =>
+            fetch(`http://localhost:5000/Booking/${params.id}`),
+        },
       ]
     },
   ]);

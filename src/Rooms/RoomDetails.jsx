@@ -65,7 +65,12 @@ const object={img1, price,size, title,checkin, checkout,email}
                 'error'
               )
             }
+            if(data.insertedId){
+              const Available = availability-1
+              return Available
+            }
         })
+       
         
 
   }
@@ -130,7 +135,7 @@ const object={img1, price,size, title,checkin, checkout,email}
         
       </div>
        <div className=" flex justify-center mx-auto">
-       <button onClick={handleAddBooking} className="btn bg-black text-white hover:bg-slate-600 w-2/4 mx-auto">Book</button>
+       <button  onClick={handleAddBooking} className="btn bg-black text-white hover:bg-slate-600 w-2/4 mx-auto">Book</button>
        </div>
      <RoomReview></RoomReview>
     </div>

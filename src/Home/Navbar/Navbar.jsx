@@ -15,12 +15,12 @@ const Navbar = () => {
         </NavLink>
       </li>
       <li>
-        <NavLink className="hover:bg-gray-500 font-serif" to="/login">
+        <NavLink className="hover:bg-gray-500 font-serif" to="/gallary">
           Gallary
         </NavLink>
       </li>
       <li>
-        <NavLink className="hover:bg-gray-500 font-serif" to="/cart">
+        <NavLink className="hover:bg-gray-500 font-serif" to="/booking">
           My Bookings
         </NavLink>
       </li>

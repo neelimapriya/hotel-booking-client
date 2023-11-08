@@ -23,13 +23,17 @@ const RoomReview = ({code, title}) => {
   }, [email]);
 
 
+
+  const today=new Date()
+  const time=(today.toLocaleString())
+  
   
   const handleSubmitReview=(e)=>{
     e.preventDefault();
     const form = e.target;
     const text = form.text.value;
     const rating = form.rating.value;
-    const object ={text, rating,code,photo,name, title}
+    const object ={text, rating,code,photo,name, title, time}
     console.log(object)
 
     fetch('http://localhost:5000/review',{

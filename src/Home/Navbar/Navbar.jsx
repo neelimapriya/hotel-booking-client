@@ -7,6 +7,10 @@ const Navbar = () => {
   const handleLogout = () => {
     logOut().then().catch();
   };
+
+  const today=new Date()
+  const time=(today.toLocaleString())
+
   const navLinks = (
     <>
       <li>
@@ -15,8 +19,8 @@ const Navbar = () => {
         </NavLink>
       </li>
       <li>
-        <NavLink className="hover:bg-gray-500 font-serif" to="/gallary">
-          Gallary
+        <NavLink className="hover:bg-gray-500 font-serif" to="/room">
+          Rooms
         </NavLink>
       </li>
       <li>
@@ -24,7 +28,11 @@ const Navbar = () => {
           My Bookings
         </NavLink>
       </li>
-      
+      <li>
+        <NavLink className="hover:bg-gray-500 font-serif" to="/gallary">
+          Gallery
+        </NavLink>
+      </li>
       <li>
         <NavLink className="hover:bg-gray-500 font-serif" to="/contact">
           Contact
@@ -64,6 +72,7 @@ const Navbar = () => {
             <img className='w-10' src={logo} alt="" />
          <a className="font-serif hover:underline  cursor-pointer font-semibold text-2xl ml-3">Lartisien</a>
          </div>
+         <p className='text-sm'>Local Time: {time}</p>
         </div>
         
         <div className="navbar-end  text-center">

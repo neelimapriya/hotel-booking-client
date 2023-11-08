@@ -20,7 +20,7 @@ const ReviewCard = ({ item }) => {
               <p className="text-base ">Rating: {item.rating}</p>{" "}
               <FaStar className="text-orange-500"></FaStar>
             </div>
-
+            <p className="text-sm">Date: {item.time}</p>
             <p className="block  text-base text-slate-500 antialiased  leading-relaxed ">
               {item.text}
             </p>

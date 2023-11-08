@@ -14,6 +14,7 @@ import Gallary from '../Gallary/Gallary';
 import Update from '../Booking/Update';
 import SingleRoomReview from '../Rooms/SingleRoomReview';
 import Review from '../Review/Review';
+import Terms from '../Terms&Condition/Terms';
 
 const router = createBrowserRouter([
     {
@@ -75,6 +76,10 @@ const router = createBrowserRouter([
           path:'/allreview',
           element:<Review></Review>,
           // loader:()=>fetch('http://localhost:5173/reviewItem')
+        },
+        {
+          path:'/terms',
+          element:<Terms></Terms>
         }
       ]
     },

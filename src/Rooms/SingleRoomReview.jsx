@@ -48,6 +48,7 @@ const SingleRoomReview = ({ code, title }) => {
                   <div className="flex items-center gap-1">
                   <p className="text-base ">Rating: {item.rating}</p> <FaStar className="text-orange-500"></FaStar>
                   </div>
+                  <p className="text-sm">Date: {item.time}</p>
                   <p className="block mt-2 font-serif text-lg text-black antialiased font-light leading-relaxed text-inherit">
                    Category: {item.title}
                   </p>

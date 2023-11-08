@@ -1,3 +1,5 @@
+import { Link } from "react-router-dom";
+
 const NewsLetter = () => {
   return (
     <div className="relative ">
@@ -32,7 +34,7 @@ const NewsLetter = () => {
             <button className="underline">SIGN UP</button>
           </div>
         </form>
-        <p className="text-xs w-3/4 mx-auto md:mt-10 mb-5">Your personal data is to be used by the legal entity LARTISIEN SARL in order to provide you with the LARTISIEN services that you requested, to send you information on LARTISIEN activities and services and to provide offers tailored to your interests. To find out more about LARTISIEN processing of your personal data and your rights, please consult our Privacy Policy at the following address: Privacy policy</p>
+        <p className="text-xs w-3/4 mx-auto md:mt-10 mb-5">Your personal data is to be used by the legal entity LARTISIEN SARL in order to provide you with the LARTISIEN services that you requested, to send you information on LARTISIEN activities and services and to provide offers tailored to your interests. To find out more about LARTISIEN processing of your personal data and your rights, please consult our Privacy Policy at the following address: <Link to='/terms'><span  className="text-base underline">Privacy policy</span></Link></p>
       </div>
     </div>
   );

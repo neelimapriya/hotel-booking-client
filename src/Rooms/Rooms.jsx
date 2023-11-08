@@ -39,7 +39,7 @@ const Rooms = () => {
 
   return (
     <div className="text-center mt-10 ">
-      <h2 className="text-amber-800 text-2xl  font-serif">“ Luxury Rooms” </h2>
+      <h2 className="text-amber-800 text-2xl  font-serif">“Our Luxury Rooms & Suits” </h2>
       <p className="text-md w-full md:w-1/2 mx-auto mb-5">
         Dedicated To Providing Our Guests With The Exceptional Services. Our
         Timeless Hotel Evokes A Unique Sense Of Understand Elegence Of Modern

@@ -9,7 +9,7 @@ const NewsLetter = () => {
     console.log(email);
     const newsData={email}
 
-    fetch("http://localhost:5000/news", {
+    fetch("https://hotel-server-wheat.vercel.app/news", {
       method: "POST",
       headers: {
         "content-type": "application/json",
@@ -28,7 +28,7 @@ const NewsLetter = () => {
 
   return (
     <div className="relative ">
-      <p>You have already subscribed to our newsletter.</p>
+      
 
       <div className="">
         <img

@@ -45,12 +45,12 @@ const AuthProvider = ({children}) => {
       setLoading(false)
       if(currentUser){
         
-        axios.post('http://localhost:5000/api/v1/auth/access-token', loggedUser,{
+        axios.post('https://hotel-server-wheat.vercel.app/api/v1/auth/access-token', loggedUser,{
           withCredentials:true
         }).then(res=>console.log(res))
       }
       else {
-        axios.post('http://localhost:5000/logout', loggedUser, {
+        axios.post('https://hotel-server-wheat.vercel.app/logout', loggedUser, {
             withCredentials: true
         })
             .then(res => {

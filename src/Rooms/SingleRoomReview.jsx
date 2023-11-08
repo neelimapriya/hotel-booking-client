@@ -7,7 +7,7 @@ const SingleRoomReview = ({ code, title }) => {
   const [review, setReview] = useState();
 
   useEffect(() => {
-    fetch(`http://localhost:5000/reviewItem/${code}`)
+    fetch(`https://hotel-server-wheat.vercel.app/reviewItem/${code}`)
       .then((res) => res.json())
       .then((data) => setReview(data));
   }, [code]);

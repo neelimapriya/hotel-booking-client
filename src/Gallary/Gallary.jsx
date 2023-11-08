@@ -6,7 +6,7 @@ import { Helmet } from "react-helmet";
 const Gallary = () => {
     const [photos, setPhotos]=useState()
     useEffect(()=>{
-        fetch('http://localhost:5000/photo')
+        fetch('https://hotel-server-wheat.vercel.app/photo')
         .then(res=>res.json())
         .then(data=>setPhotos(data))
     },[])

@@ -15,7 +15,7 @@ const Update = () => {
 
     const updatedData={ img1, price, size, title, checkin, checkout }
 
-    fetch(`http://localhost:5000/updateBooking/${_id}`, {
+    fetch(`https://hotel-server-wheat.vercel.app/updateBooking/${_id}`, {
       method: "PUT",
       headers: {
         "content-type": "application/json",

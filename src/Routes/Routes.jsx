@@ -54,29 +54,29 @@ const router = createBrowserRouter([
         {
           path:'/room',
           element:<Rooms></Rooms>,
-          // loader:()=>fetch('http://localhost:5000/room')
+         
         },
         {
           path:'/room/:id',
           element:<PrivateRoute><RoomDetails></RoomDetails></PrivateRoute>,
           loader: ({ params }) =>
-          fetch(`http://localhost:5000/api/v1/room/${params.id}`),
+          fetch(`https://hotel-server-wheat.vercel.app/api/v1/room/${params.id}`),
         },
         {
           path: "/update/:id",
           element:<Update></Update>,
           loader: ({ params }) =>
-            fetch(`http://localhost:5000/Booking/${params.id}`),
+            fetch(`https://hotel-server-wheat.vercel.app/Booking/${params.id}`),
         },
         {
           path:'/review/:code',
           element:<SingleRoomReview></SingleRoomReview>,
-          // loader:({params})=>fetch(`http://localhost:5000/reviewItem/${params.code}`)
+         
         },
         {
           path:'/allreview',
           element:<Review></Review>,
-          // loader:()=>fetch('http://localhost:5173/reviewItem')
+          
         },
         {
           path:'/terms',

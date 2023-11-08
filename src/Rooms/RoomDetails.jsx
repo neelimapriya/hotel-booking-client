@@ -47,7 +47,7 @@ const RoomDetails = () => {
   }
 const object={img1, price,size, title,checkin, checkout,email, code}
   const handleAddBooking=()=>{
-    fetch('http://localhost:5000/api/v1/user/create-bookings',{
+    fetch('https://hotel-server-wheat.vercel.app/api/v1/user/create-bookings',{
             method:'POST',
             headers:{
                 'content-type':'application/json'
@@ -58,11 +58,16 @@ const object={img1, price,size, title,checkin, checkout,email, code}
         .then(data=>{
             console.log(data)
             if(data.insertedId && checkin && checkout){
-                Swal.fire(
-                    'Booked!',
-                    'Room Booked successfully!',
-                    'success'
-                  )
+               
+                Swal.fire({
+                  title: `${title}`,
+                  text: `Price:'$' ${price}`,
+          
+                  imageUrl: `${img1}`,
+                  imageWidth: 400,
+                  imageHeight: 200,
+                  imageAlt: "Custom image"
+                });
                  
             }else{
               Swal.fire(

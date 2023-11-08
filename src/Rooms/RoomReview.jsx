@@ -17,7 +17,7 @@ const RoomReview = ({code, title}) => {
 
 
   useEffect(() => {
-    fetch(`http://localhost:5000/user/bookings?email=${email}`)
+    fetch(`https://hotel-server-wheat.vercel.app/user/bookings?email=${email}`)
       .then((response) => response.json())
       .then((data) => setCarts(data));
   }, [email]);
@@ -36,7 +36,7 @@ const RoomReview = ({code, title}) => {
     const object ={text, rating,code,photo,name, title, time}
     console.log(object)
 
-    fetch('http://localhost:5000/review',{
+    fetch('https://hotel-server-wheat.vercel.app/review',{
       method:'POST',
       headers:{
           'content-type':'application/json'

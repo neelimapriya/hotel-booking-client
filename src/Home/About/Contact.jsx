@@ -13,7 +13,7 @@ const Contact = () => {
     console.log(email,name,text);
     const contactData={email, name, text}
 
-    fetch("http://localhost:5000/contact", {
+    fetch("https://hotel-server-wheat.vercel.app/contact", {
       method: "POST",
       headers: {
         "content-type": "application/json",
@@ -32,11 +32,12 @@ const Contact = () => {
 
 
   return (
-    <div>
+    <div >
       <Helmet>
         <title>Lartisien | Contact</title>
       </Helmet>
-      <div className="mt-20 p-5 flex flex-col md:flex-row max-w-5xl mx-auto text-black font-serif">
+      <h2 className='text-4xl text-center font-serif font-bold mt-10 underline'>Contact Us</h2>
+      <div className="mt-10 p-5 flex flex-col md:flex-row max-w-5xl mx-auto text-black font-serif">
        
       <div className=" md:w-1/2">
         <img src="https://i.ibb.co/tMXk6D6/LogoL.png" alt="" className="w-16" />

@@ -7,7 +7,7 @@ const RoomsCard = ({ rooms }) => {
     <div>
       <div
         data-aos="fade-up"
-        data-aos-duration="3000"
+        data-aos-duration="2000"
         className="relative flex card-compact   border border-amber-800 h-[350px] md:h-[300px]"
       >
         <figure className="w-2/3">

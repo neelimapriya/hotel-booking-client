@@ -9,7 +9,7 @@ const NewsLetter = () => {
         />
       </div>
 
-      <div className="bg-white md:mb-5  absolute bottom-1 w-1/2 ml-5 border border-slate-900">
+      <div className="bg-white md:mb-5  absolute bottom-1 lg:w-1/2 ml-5 border border-slate-900">
         <p className="mt-10 w-3/4 mx-auto text-xl font-thin text-center">
           FOR EXCLUSIVE BENEFITS, INSIDER NEWS AND OUT-OF-THE-BOX TRAVEL
           INSPIRATIONS

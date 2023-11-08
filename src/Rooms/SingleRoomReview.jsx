@@ -30,7 +30,7 @@ const SingleRoomReview = ({ code, title }) => {
                                 {item.name}
                             </h2>
                         </div> */}
-              <div className="shadow-lg  relative flex flex-col mt-10 text-gray-700 bg-white shadow-md w-72 rounded-xl bg-clip-border">
+              <div className="shadow-lg  relative flex flex-col mt-10 text-gray-700 bg-white  w-72 rounded-xl bg-clip-border">
                 <div className="p-6 ">
                   <div className="flex ">
                     <img

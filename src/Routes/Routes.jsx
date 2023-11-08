@@ -13,6 +13,7 @@ import Bookings from '../Booking/Bookings';
 import Gallary from '../Gallary/Gallary';
 import Update from '../Booking/Update';
 import SingleRoomReview from '../Rooms/SingleRoomReview';
+import Review from '../Review/Review';
 
 const router = createBrowserRouter([
     {
@@ -69,6 +70,11 @@ const router = createBrowserRouter([
           path:'/review/:code',
           element:<SingleRoomReview></SingleRoomReview>,
           // loader:({params})=>fetch(`http://localhost:5000/reviewItem/${params.code}`)
+        },
+        {
+          path:'/allreview',
+          element:<Review></Review>,
+          // loader:()=>fetch('http://localhost:5173/reviewItem')
         }
       ]
     },

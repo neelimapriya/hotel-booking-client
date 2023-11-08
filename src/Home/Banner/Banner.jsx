@@ -1,8 +1,10 @@
+import { Helmet } from "react-helmet";
 
 
 const Banner = () => {
     return (
        <div>
+        
         <div className='relative'>
       
       <div className="h-screen w-full flex ">

@@ -11,6 +11,7 @@ import Swal from "sweetalert2";
 import useAxios from "../hooks/useAxios";
 import { useQuery } from "@tanstack/react-query";
 import SingleRoomReview from "./SingleRoomReview";
+import { Helmet } from "react-helmet";
 
 const RoomDetails = () => {
   const {User}=useContext(AuthContext)
@@ -81,6 +82,7 @@ const object={img1, price,size, title,checkin, checkout,email, code}
 
   return (
     <div className="mt-5 mb-20">
+      
         <h2 className="  text-3xl text-center font-serif  text-orange-700">{title}</h2>
         <hr  className="max-w-[250px] mx-auto "/>
         
@@ -93,6 +95,7 @@ const object={img1, price,size, title,checkin, checkout,email, code}
        </div>
         {/* date */}
         <div className="grid mt-3 items-center justify-center  ">
+          <h2 className="text-xl text-orange-800 text-center font-serif py-2">Up to 10% offer going on!!!</h2>
       <div className="outline grid-cols-3">
         <div className="flex justify-center gap-8 text-lg font-serif bg-orange-800 text-white">
           <p>Check In</p>

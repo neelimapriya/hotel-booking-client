@@ -66,7 +66,7 @@ const RoomReview = ({code, title}) => {
       <div  className="mt-10 bg-slate-300 w-4/5 lg:w-2/4 mx-auto">
       <form onSubmit={handleSubmitReview} className="grid justify-center">
       <label className="label grid justify-center">
-            <span className="text-xl font-serif">If you booked this room you can write review </span>
+            <span className="text-xl font-serif">If you have booked this room you can write review </span>
               
             </label>
             <div className="grid grid-cols-2 justify-center items-center ">
@@ -107,7 +107,7 @@ const RoomReview = ({code, title}) => {
                   </label>
                 </div>
             </div>
-            <input type="submit" value='Send' className="btn active bg-black hover:bg-slate-600 text-white w-1/3 mx-auto"/>
+            <input type="submit"  value='Send' className="btn active bg-black hover:bg-slate-600 text-white w-1/3 mx-auto"/>
       </form>
       </div>
       <div>

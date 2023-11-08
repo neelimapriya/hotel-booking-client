@@ -3,6 +3,7 @@ import RoomsCard from "./RoomsCard";
 import { useQuery } from "@tanstack/react-query";
 import useAxios from "../hooks/useAxios";
 import { AuthContext } from "../Provider/AuthProvider";
+import { Helmet } from "react-helmet";
 
 const Rooms = () => {
   //   const [roomData, setRoomData] = useState();
@@ -39,6 +40,9 @@ const Rooms = () => {
 
   return (
     <div className="text-center mt-10 ">
+       <Helmet>
+        <title>Lartisien | Rooms</title>
+      </Helmet>
       <h2 className="text-amber-800 text-2xl  font-serif">“Our Luxury Rooms & Suits” </h2>
       <p className="text-md w-full md:w-1/2 mx-auto mb-5">
         Dedicated To Providing Our Guests With The Exceptional Services. Our

@@ -1,7 +1,11 @@
+import { Helmet } from 'react-helmet';
 import { AiOutlineArrowRight } from 'react-icons/ai';
 const Contact = () => {
   return (
     <div className="mt-20 p-5 flex flex-col md:flex-row max-w-5xl mx-auto text-black font-serif">
+       <Helmet>
+        <title>Lartisien | Contact</title>
+      </Helmet>
       <div className=" md:w-1/2">
         <img src="https://i.ibb.co/tMXk6D6/LogoL.png" alt="" className="w-16" />
         <h2 className="text-2xl font-semibold font-serif mb-3">Address</h2>

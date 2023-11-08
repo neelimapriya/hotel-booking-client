@@ -1,6 +1,7 @@
 import { useEffect, useState } from "react";
 import GalleryCard from "./GalleryCard";
 import cover from '../assets/6970138.jpg'
+import { Helmet } from "react-helmet";
 
 const Gallary = () => {
     const [photos, setPhotos]=useState()
@@ -11,6 +12,9 @@ const Gallary = () => {
     },[])
     return (
         <div>
+             <Helmet>
+        <title>Lartisien | Gallery</title>
+      </Helmet>
             <div className=" ">
                 <img className="w-screen h-[400px]" src={cover} alt="" />
                 <div className="   flex items-center justify-center  ">

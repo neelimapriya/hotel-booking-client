@@ -6,6 +6,7 @@ import { Link } from "react-router-dom";
 import { FaArrowLeft } from "react-icons/fa";
 import BookingCard from "./BookingCard";
 import Swal from "sweetalert2";
+import { Helmet } from "react-helmet";
 
 export const Bookings = () => {
   const { User } = useContext(AuthContext);
@@ -42,6 +43,9 @@ export const Bookings = () => {
 
   return (
     <div>
+       <Helmet>
+        <title>Lartisien | My Bookings</title>
+      </Helmet>
       <div>
         {bookings?.data?.length == 0 && (
           <div>

@@ -5,10 +5,14 @@ import Review from "../../Review/Review";
 import About from "../About/About";
 import Contact from "../About/Contact";
 import NewsLetter from "../../News/NewsLetter";
+import { Helmet } from "react-helmet";
 
 const Home = () => {
   return (
     <div>
+      <Helmet>
+        <title>Lartisien | Home</title>
+      </Helmet>
       <Banner></Banner>
       <Rooms></Rooms>
       <Review></Review>

@@ -74,7 +74,7 @@ const Navbar = () => {
          </div>
          
         </div>
-        {/* <div className='navbar-center text-[12px]  ' ><p>Local Time: {time}</p></div> */}
+        <div className='hidden md:flex navbar-center text-[12px]  ' ><p>Local Time: {time}</p></div>
         
         <div className="navbar-end  text-center">
         <div className="  ">

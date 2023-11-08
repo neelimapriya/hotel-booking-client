@@ -1,8 +1,35 @@
 import { Link } from "react-router-dom";
+import Swal from "sweetalert2";
 
 const NewsLetter = () => {
+  const handleSubmit = (e) => {
+    e.preventDefault();
+    const form= e.target;
+    const email = form.email.value;
+    console.log(email);
+    const newsData={email}
+
+    fetch("http://localhost:5000/news", {
+      method: "POST",
+      headers: {
+        "content-type": "application/json",
+      },
+      body: JSON.stringify(newsData),
+    })
+      .then((res) => res.json())
+      .then((data) => {
+        console.log(data);
+        if (data.insertedId) {
+          Swal.fire("Welcome!", "You are subscribed to our newsletter!", "success");
+          form.reset()
+        }
+      });
+  };
+
   return (
     <div className="relative ">
+      <p>You have already subscribed to our newsletter.</p>
+
       <div className="">
         <img
           className="h-screen w-full"
@@ -19,11 +46,11 @@ const NewsLetter = () => {
         <h2 className="w-3/4 mt-5 mx-auto font-bold text-3xl font-serif text-center ">
           Sign up for our newsletter
         </h2>
-        <form className="w-3/4 card-body   mx-auto">
+        <form onSubmit={handleSubmit} className="w-3/4 card-body   mx-auto">
           <div className="form-control">
-            
             <input
               type="email"
+              name="email"
               placeholder="Your email address"
               className="input input-bordered"
               required
@@ -31,10 +58,24 @@ const NewsLetter = () => {
           </div>
 
           <div className="form-control mt-6">
-            <button className="underline">SIGN UP</button>
+            <input
+              type="submit"
+              className="underline text-center"
+              value="SIGN UP"
+            />
           </div>
         </form>
-        <p className="text-xs w-3/4 mx-auto md:mt-10 mb-5">Your personal data is to be used by the legal entity LARTISIEN SARL in order to provide you with the LARTISIEN services that you requested, to send you information on LARTISIEN activities and services and to provide offers tailored to your interests. To find out more about LARTISIEN processing of your personal data and your rights, please consult our Privacy Policy at the following address: <Link to='/terms'><span  className="text-base underline">Privacy policy</span></Link></p>
+        <p className="text-xs w-3/4 mx-auto md:mt-10 mb-5">
+          Your personal data is to be used by the legal entity LARTISIEN SARL in
+          order to provide you with the LARTISIEN services that you requested,
+          to send you information on LARTISIEN activities and services and to
+          provide offers tailored to your interests. To find out more about
+          LARTISIEN processing of your personal data and your rights, please
+          consult our Privacy Policy at the following address:{" "}
+          <Link to="/terms">
+            <span className="text-base underline">Privacy policy</span>
+          </Link>
+        </p>
       </div>
     </div>
   );

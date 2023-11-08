@@ -21,7 +21,7 @@ const Gallary = () => {
                 <h2 className="text-4xl justify-center font-serif font-bold bg-black w-full mx-auto flex text-yellow-600 py-2">Gallery Of LARTISIEN</h2>
                 </div>
             </div>
-            <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-1">
+            <div className="grid grid-cols-1  lg:grid-cols-2 gap-1">
             {
                 photos?.map(photo=><GalleryCard key={photo._id} photo={photo}></GalleryCard>)
             }

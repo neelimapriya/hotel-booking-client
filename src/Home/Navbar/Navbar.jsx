@@ -72,8 +72,9 @@ const Navbar = () => {
             <img className='w-10' src={logo} alt="" />
          <a className="font-serif hover:underline  cursor-pointer font-semibold text-2xl ml-3">Lartisien</a>
          </div>
-         <p className='text-sm'>Local Time: {time}</p>
+         
         </div>
+        <div className='navbar-center text-[12px]  ' ><p>Local Time: {time}</p></div>
         
         <div className="navbar-end  text-center">
         <div className="  ">

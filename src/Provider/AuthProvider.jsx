@@ -11,6 +11,7 @@ import {
   createUserWithEmailAndPassword,
 } from "firebase/auth";
 import axios from "axios";
+import { useIsRestoring } from "@tanstack/react-query";
 
 export const AuthContext = createContext(null);
 const auth = getAuth(app);
@@ -38,20 +39,29 @@ const AuthProvider = ({children}) => {
   };
   useEffect(() => {
     const unSubscribe = onAuthStateChanged(auth, (currentUser) => {
-
+      const userEmail = currentUser?.email || User?.email;
+      const loggedUser={email:userEmail}
       setUser(currentUser);
+      setLoading(false)
       if(currentUser){
-        const loggedUser={email:currentUser.email}
+        
         axios.post('http://localhost:5000/api/v1/auth/access-token', loggedUser,{
           withCredentials:true
         }).then(res=>console.log(res))
       }
-      setLoading(false);
+      else {
+        axios.post('http://localhost:5000/logout', loggedUser, {
+            withCredentials: true
+        })
+            .then(res => {
+                console.log(res.data);
+            })
+          }
     });
     return () => {
       unSubscribe();
     };
-  }, []);
+  }, [User]);
 
   const authInfo = {
     createUser,

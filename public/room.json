@@ -1,81 +1,62 @@
 [
-    {
-      
-      "title": "Boutique Room",
-      "img1": "https://i.ibb.co/3cMbYTv/hilton-memphis-cr-courtesy.jpg",
-      "img2": "https://i.ibb.co/SmQj5bq/01b719a2-z.jpg",
-      "img3": "https://i.ibb.co/ZVkh72F/xxl-153122531.jpg",
-      "description": "High-quality product with advanced features. Perfect for your needs.",
-      "price2": 259.99,
-      "price": 249.99,
-      "size": "Medium",
-      "availability": 3,
-      "offers": "10% off for a limited time."
-    },
-    {
-   
-      "title": "Executive Double",
-      "img1": "https://i.ibb.co/3rjDtq8/executive-double1.jpg",
-      "img2": "https://i.ibb.co/sw48Pv0/executive-double2.jpg",
-      "img3": "https://i.ibb.co/VLC3fG8/executive-double4.jpg",
-      "description": "25 Sq.m. rooms, city views, integrated climate control, free Wi-Fi, electronic safe capable of holding a laptop, flat screen TV, bathrobes, hair dryer, luxurious bathroom.",
-      "price2": 389.99,
-      "price": 379.99,
-      "size": "Large",
-      "availability": 3,
-      "offers": "Buy one, get one 50% off."
-    },
-    {
-      
-      "title": "Executive Twin",
-      "img1": "https://i.ibb.co/VDR3fHZ/executive-twin1.jpg",
-      "img2": "https://i.ibb.co/B6FGrfr/executive-twin3.jpg",
-      "img3": "https://i.ibb.co/8YtVmhG/executive-twin4.jpg",
-      "description": "22 Sq.m. rooms, city views, integrated climate control, free Wi-Fi, electronic safe capable of holding a laptop, flat screen TV, bathrobes, hair dryer, luxurious bathroom.",
-      "price2": 339.99,
-      "price": 329.99,
-      "size": "Large",
-      "availability": 2,
-      "offers": "Currently out of stock."
-    },
-    {
-   
-      "title": "Premier Twin",
-      "img1": "https://i.ibb.co/zRHLLfh/premier-twin1.jpg",
-      "img2": "https://i.ibb.co/B6FGrfr/executive-twin3.jpg",
-      "img3": "https://i.ibb.co/8YtVmhG/executive-twin4.jpg",
-      "description": "30 Sq.m. rooms, city views, integrated climate control, free Wi-Fi, electronic safe capable of holding a laptop, flat screen TV, bathrobes, hair dryer, luxurious bathroom.",
-      "price2": 399.99,
-      "price": 370.99,
-      "size": "Large",
-      "availability": 2,
-      "offers": "Free shipping on orders over $100."
-    },
-    {
-      
-      "title": "Family Suite",
-      "img1": "https://i.ibb.co/XCtySjx/family-suite1.jpg",
-      "img2": "https://i.ibb.co/B6FGrfr/executive-twin3.jpg",
-      "img3": "https://i.ibb.co/8YtVmhG/executive-twin4.jpg",
-      "description": "30 Sq.m. rooms, city views, integrated climate control, free Wi-Fi, electronic safe capable of holding a laptop, flat screen TV, bathrobes, hair dryer, luxurious bathroom.",
-      "price2": 499.99,
-      "price": 439.99,
-      "size": "Extra-Large",
-      "availability":3,
-      "offers": "Limited time offer: Save $50."
-    },
-    {
-     
-      "title": "Grand Suite",
-      "img1": "https://i.ibb.co/1f78fJy/grand-suite.jpg",
-      "img2": "https://i.ibb.co/fF6gpyb/grand-suite2.jpg",
-      "img3": "https://i.ibb.co/41Kg6PG/grand-suite3.jpg",
-      "description": "40 Sq.m. rooms, city views, integrated climate control, free Wi-Fi, electronic safe capable of holding a laptop, flat screen TV, bathrobes, hair dryer, luxurious bathroom.",
-      "price2": 269.99,
-      "price": 249.99,
-      "size": "Medium",
-      "availability": 3,
-      "offers": "10% off for a limited time."
-    }
-  ]
-  
+  {
+    "title": "Nature Beauty",
+    "img_url": "https://i.ibb.co/bsxqTq6/galary1.webp"
+  },
+  {
+    "title": "Cityscape at Night",
+    "img_url": "https://i.ibb.co/HrQB3cK/galary2.webp"
+  },
+  {
+    "title": "Cute Kittens",
+    "img_url": "https://i.ibb.co/1Gk5XT5/galary3.webp"
+  },
+  {
+    "title": "Delicious Pizza",
+    "img_url": "https://i.ibb.co/fYPdkgv/galary4.webp"
+  },
+  {
+    "title": "Beach Paradise",
+    "img_url": "https://i.ibb.co/yqRTvKf/galary5.webp"
+  },
+  {
+    "title": "Historic Landmark",
+    "img_url": "https://i.ibb.co/9bF01yP/galary6.webp"
+  },
+  {
+    "title": "Wildlife Safari",
+    "img_url": "https://i.ibb.co/r4vm1FT/galary7.webp"
+  },
+  {
+    "title": "Sunset Over the Mountains",
+    "img_url": "https://i.ibb.co/Nyp5QRn/galary8.webp"
+  },
+  {
+    "title": "Vintage Cars Exhibition",
+    "img_url": "https://i.ibb.co/hW08px9/galary9.webp"
+  },
+  {
+    "title": "Fashion Show Runway",
+    "img_url": "https://i.ibb.co/4VSCwJc/galary10.webp"
+  },
+  {
+    "title": "Colorful Hot Air Balloons",
+    "img_url": "https://i.ibb.co/nmd3DDN/galary11.webp"
+  },
+  {
+    "title": "Modern Architecture",
+    "img_url": "https://i.ibb.co/XC8Z3QV/galary12.webp"
+  },
+  {
+    "title": "Music Concert Crowd",
+    "img_url": "https://i.ibb.co/wLD30RG/galary13.webp"
+  },
+  {
+    "title": "Beautiful Gardens",
+    "img_url": "https://i.ibb.co/3dCMJdD/galary14.webp"
+  },
+  {
+    "title": "Antique Bookstore",
+    "img_url": "https://i.ibb.co/WPZFMR9/galary15.webp"
+  }
+]

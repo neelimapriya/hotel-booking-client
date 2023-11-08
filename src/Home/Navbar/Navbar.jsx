@@ -74,15 +74,16 @@ const Navbar = () => {
          </div>
          
         </div>
-        <div className='navbar-center text-[12px]  ' ><p>Local Time: {time}</p></div>
+        {/* <div className='navbar-center text-[12px]  ' ><p>Local Time: {time}</p></div> */}
         
         <div className="navbar-end  text-center">
         <div className="  ">
           {User ? (
             <div className='flex'>
-              <div className="flex text-white ">
+              <div className="flex ml-4
+               text-white ">
               <label tabIndex={0} className=" avatar">
-                <div className="w-7 rounded-full  ">
+                <div className="w-7 h-7 rounded-full  ">
                   <img src={User?.photoURL} />
                 </div>
               </label>

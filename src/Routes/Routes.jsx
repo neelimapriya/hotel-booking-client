@@ -15,6 +15,7 @@ import Update from '../Booking/Update';
 import SingleRoomReview from '../Rooms/SingleRoomReview';
 import Review from '../Review/Review';
 import Terms from '../Terms&Condition/Terms';
+import PrivateRoute from '../Provider/PrivateRoute';
 
 const router = createBrowserRouter([
     {
@@ -44,7 +45,7 @@ const router = createBrowserRouter([
         },
         {
           path:'/booking',
-          element:<Bookings></Bookings>
+          element:<PrivateRoute><Bookings></Bookings></PrivateRoute>
         },
         {
           path:'/gallary',

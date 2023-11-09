@@ -22,9 +22,6 @@ export const Bookings = () => {
     },
   });
   console.log(bookings?.data);
-  
-
-
 
   //    delete operation
   const queryClient = useQueryClient();
@@ -43,16 +40,15 @@ export const Bookings = () => {
 
   return (
     <div>
-       <Helmet>
+      <Helmet>
         <title>Lartisien | My Bookings</title>
       </Helmet>
-      <div>
+      <div className="mt-16 md:mt-32">
         {bookings?.data?.length == 0 && (
           <div>
-           
-           <h2 className="bg-orange-800 text-3xl font-serif text-center text-white py-3 ">
-        Your Bookings : {bookings?.data?.length} Room
-      </h2>
+            <h2 className="bg-orange-800 text-3xl font-serif text-center text-white py-3 ">
+              Your Bookings : {bookings?.data?.length} Room
+            </h2>
             <div className="flex justify-center mt-5 items-center gap-2 underline underline-offset-1">
               <FaArrowLeft></FaArrowLeft>
               <Link to="/room"> You can visit our available Rooms! </Link>
@@ -60,12 +56,12 @@ export const Bookings = () => {
           </div>
         )}
       </div>
-      {
-        bookings?.data?.length !== 0 && (<h2 className="bg-orange-800 text-3xl font-serif text-center text-white py-3 ">
-        Your Bookings : {bookings?.data?.length} Rooms
-      </h2>)
-      }
-      
+      {bookings?.data?.length !== 0 && (
+        <h2 className="bg-orange-800 text-3xl font-serif text-center text-white py-3 ">
+          Your Bookings : {bookings?.data?.length} Rooms
+        </h2>
+      )}
+
       <div className="grid grid-cols-2 md:grid-cols-3 lg:grid-cols-4 gap-1 max-w-6xl mx-auto">
         {bookings?.data?.map((books) => (
           <BookingCard

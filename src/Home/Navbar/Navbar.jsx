@@ -41,8 +41,8 @@ const Navbar = () => {
     </>
   );
   return (
-    <div className="bg-black top-0 fixed z-10 w-full text-white">
-      <div className="navbar  max-w-7xl mx-auto">
+    <div className="bg-black top-0 fixed z-20 w-full text-white">
+      <div className="navbar  w-full max-w-7xl mx-auto">
         <div className="navbar-start">
           <div className="dropdown flex items-center">
             <label tabIndex={0} className="  lg:hidden">

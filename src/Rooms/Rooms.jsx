@@ -39,7 +39,7 @@ const Rooms = () => {
   console.log(price);
 
   return (
-    <div className="text-center mt-10 ">
+    <div className="text-center mt-24 lg:mt-36">
        <Helmet>
         <title>Lartisien | Rooms</title>
       </Helmet>

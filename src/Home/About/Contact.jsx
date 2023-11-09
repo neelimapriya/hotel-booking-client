@@ -36,7 +36,7 @@ const Contact = () => {
       <Helmet>
         <title>Lartisien | Contact</title>
       </Helmet>
-      <h2 className='text-4xl text-center font-serif font-bold mt-10 underline'>Contact Us</h2>
+      <h2 className='text-4xl text-center font-serif font-bold mt-20 lg:mt-32 underline'>Contact Us</h2>
       <div className="mt-10 p-5 flex flex-col md:flex-row max-w-5xl mx-auto text-black font-serif">
        
       <div className=" md:w-1/2">

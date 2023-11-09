@@ -86,7 +86,7 @@ const object={img1, price,size, title,checkin, checkout,email, code}
    
 
   return (
-    <div className="mt-5 mb-20">
+    <div className="mt-5 mb-20 md:mt-20 lg:mt-36">
       
         <h2 className="  text-3xl text-center font-serif  text-orange-700">{title}</h2>
         <hr  className="max-w-[250px] mx-auto "/>

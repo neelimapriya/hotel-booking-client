@@ -20,7 +20,7 @@ const Register = () => {
         const photo = form.get("photo");
         const email = form.get("email");
         const password = form.get("password");
-        console.log(name, photo, email, password);
+        // console.log(name, photo, email, password);
     
         if (password.length < 6) {
           Swal.fire({

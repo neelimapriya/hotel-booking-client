@@ -4,7 +4,7 @@ import Swal from "sweetalert2";
 
 const Update = () => {
   const data = useLoaderData();
-  console.log(data);
+  // console.log(data);
   const { img1, price, size, title, checkin, checkout, _id } = data;
 
   const handleUpdate=(e)=>{

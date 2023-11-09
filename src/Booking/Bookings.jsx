@@ -11,7 +11,7 @@ import { Helmet } from "react-helmet";
 export const Bookings = () => {
   const { User } = useContext(AuthContext);
   const email = User?.email;
-  console.log(email);
+  // console.log(email);
 
   const axios = useAxios();
   const { data: bookings } = useQuery({

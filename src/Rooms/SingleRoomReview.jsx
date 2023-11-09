@@ -11,7 +11,7 @@ const SingleRoomReview = ({ code, title }) => {
       .then((res) => res.json())
       .then((data) => setReview(data));
   }, [code]);
-  console.log(review);
+  // console.log(review);
 
   return (
     <div className="mt-10 mb-10">

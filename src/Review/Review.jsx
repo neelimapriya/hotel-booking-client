@@ -39,7 +39,7 @@ const Review = () => {
     queryKey: ['review'],
     queryFn: getReview,
   });
-console.log(data?.data)
+// console.log(data?.data)
 
 
     return (

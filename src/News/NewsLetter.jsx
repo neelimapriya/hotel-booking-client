@@ -18,7 +18,7 @@ const NewsLetter = () => {
     })
       .then((res) => res.json())
       .then((data) => {
-        console.log(data);
+        // console.log(data);
         if (data.insertedId) {
           Swal.fire("Welcome!", "You are subscribed to our newsletter!", "success");
           form.reset()

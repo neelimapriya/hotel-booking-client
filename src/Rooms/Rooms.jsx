@@ -12,7 +12,7 @@ const Rooms = () => {
   const axios = useAxios();
 
   const getRooms = async () => {
-    console.log(price);
+    // console.log(price);
     const res = await axios.get(`/room?sortField=price&sortOrder=${price}`);
 
     return res;
@@ -27,7 +27,7 @@ const Rooms = () => {
     queryFn: getRooms,
   });
 
-  console.log(data);
+  // console.log(data);
 
   if (isLoading) {
     return loading;
@@ -36,7 +36,7 @@ const Rooms = () => {
     return 
   }
 
-  console.log(price);
+  // console.log(price);
 
   return (
     <div className="text-center mt-24 lg:mt-36">

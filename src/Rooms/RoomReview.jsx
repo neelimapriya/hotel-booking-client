@@ -24,8 +24,8 @@ const RoomReview = ({ code, title }) => {
     },
   });
   const cart = bookings?.data;
-  const BookCode = cart?.map((i) => i.code ==code); //['101', '102', '102', '102', '102']
-  console.log(cart?.map((i) => i.code ==code))
+  const BookCode = cart?.filter((i) => i.code ==code); //['101', '102', '102', '102', '102']
+  // console.log(cart?.filter((i) => i.code ==code))
 
   const today = new Date();
   const time = today.toLocaleString();

@@ -27,18 +27,22 @@ const NewsLetter = () => {
   };
 
   return (
-    <div className="relative ">
+    <div className="py-5">
+    <div className="hero flex justify-start w-full p-2 min-h-screen max-w-full mx-auto"   style={{
+      backgroundImage:
+        "url(https://i.ibb.co/6Xc9qpg/floral-ornaments-23-2148134159.jpg)",
+    }}>
       
 
-      <div className="">
+      {/* <div className="">
         <img
-          className="h-screen w-full"
+          className="h-screen w-full "
           src="https://i.ibb.co/f2G3dWb/flower-product-backdrop-with-tulip-green.jpg"
           alt=""
         />
-      </div>
+      </div> */}
 
-      <div className="bg-white md:mb-5  absolute bottom-1 lg:w-1/2 ml-5 border border-slate-900">
+      <div  className="bg-white md:mb-5   bottom-1 md:w-1/2 ml-5 border border-slate-900">
         <p className="mt-10 w-3/4 mx-auto text-xl font-thin text-center">
           FOR EXCLUSIVE BENEFITS, INSIDER NEWS AND OUT-OF-THE-BOX TRAVEL
           INSPIRATIONS
@@ -77,6 +81,7 @@ const NewsLetter = () => {
           </Link>
         </p>
       </div>
+    </div>
     </div>
   );
 };

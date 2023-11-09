@@ -6,6 +6,7 @@ import { AuthContext } from '../Provider/AuthProvider';
 import useAxios from '../hooks/useAxios';
 import { useQuery } from '@tanstack/react-query';
 import ReviewCard from './ReviewCard';
+import Marquee from 'react-fast-marquee';
 
 
 
@@ -46,11 +47,11 @@ console.log(data?.data)
              <h2 className="text-3xl font-serif font-semibold text-orange-800 text-center underline">
           Reviews
         </h2>
-            <div className='grid grid-cols-2 md:grid-cols-3 lg:grid-cols-4  gap-2 lg:gap-4'>
+            <Marquee className=''>
               {
                 data?.data?.map(item=> <ReviewCard key={item._id} item={item}></ReviewCard>)
               }
-            </div>
+            </Marquee>
         </div>
     );
 };

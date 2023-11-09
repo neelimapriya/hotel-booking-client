@@ -1,4 +1,4 @@
-# Live Link: https://hotel-6de04.web.app/
+# Live Link: https://hotel-6de04.web.app
 
 ## Assignment_ID: assignment_category_0004
 

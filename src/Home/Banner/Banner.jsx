@@ -23,10 +23,10 @@ const Banner = () => {
       </div>
     </div>
      </div>
-     <div className="bg-orange-800 text-center text-white">
+     <div className="bg-orange-800 text-center text-white animate-pulse">
       <h2 className="text-2xl font-serif py-2">The World Is Right Here</h2>
       <h2 className="text-3xl font-serif font-bold">STOP CLICKING AROUND.START SAVING.</h2>
-      <p className="bg-white text-orange-800 text-2xl font-serif font-semibold py-2 w-52 mx-auto">UP TO 10% OFF</p>
+      <p className="bg-white text-orange-800 text-2xl font-serif font-semibold py-2 w-52 mx-auto rounded-lg">UP TO 10% OFF</p>
       <p className="text-2xl font-serif py-2">FLASH SALE LIMITED TIME ONLY</p>
 
      </div>

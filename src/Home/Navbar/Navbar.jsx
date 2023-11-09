@@ -1,15 +1,15 @@
-import { useContext } from 'react';
-import logo from '../../../src/assets/LogoL.png'
-import { AuthContext } from '../../Provider/AuthProvider';
-import { Link, NavLink } from 'react-router-dom';
+import { useContext } from "react";
+import logo from "../../../src/assets/LogoL.png";
+import { AuthContext } from "../../Provider/AuthProvider";
+import { Link, NavLink } from "react-router-dom";
 const Navbar = () => {
   const { User, logOut } = useContext(AuthContext);
   const handleLogout = () => {
     logOut().then().catch();
   };
 
-  const today=new Date()
-  const time=(today.toLocaleString())
+  const today = new Date();
+  const time = today.toLocaleString();
 
   const navLinks = (
     <>
@@ -41,8 +41,8 @@ const Navbar = () => {
     </>
   );
   return (
-    <div className='bg-black text-white'>
-      <div className="navbar   max-w-7xl mx-auto">
+    <div className="bg-black top-0 fixed z-10 w-full text-white">
+      <div className="navbar  max-w-7xl mx-auto">
         <div className="navbar-start">
           <div className="dropdown flex items-center">
             <label tabIndex={0} className="  lg:hidden">
@@ -68,55 +68,59 @@ const Navbar = () => {
               {navLinks}
             </ul>
           </div>
-         <div className='flex items-center'>
-            <img className='w-10' src={logo} alt="" />
-         <a className="font-serif hover:underline  cursor-pointer font-semibold text-2xl ml-3">Lartisien</a>
-         </div>
-         
-        </div>
-        <div className='hidden md:flex navbar-center text-[12px]  ' ><p>Local Time: {time}</p></div>
-        
-        <div className="navbar-end  text-center">
-        <div className="  ">
-          {User ? (
-            <div className='flex'>
-              <div className="flex ml-4
-               text-white ">
-              <label tabIndex={0} className=" avatar">
-                <div className="w-7 h-7 rounded-full  ">
-                  <img src={User?.photoURL} />
-                </div>
-              </label>
-              <p className="text-white font-serif text-sm flex justify-center items-center  ml-1">
-                {User?.displayName}
-              </p>
-              </div>
-
-              <button
-                onClick={handleLogout}
-                className="ml-4 font-serif w-20 text-white hover:bg-gray-700 rounded-lg"
-              >
-                LogOut
-              </button>
+          <Link to='/'>
+            <div className="flex  items-center">
+              <img className="w-10 animate-pulse" src={logo} alt="" />
+              <a className="font-serif hover:underline  cursor-pointer font-semibold text-2xl ml-3 ">
+                Lartisien
+              </a>
             </div>
-          ) : (
-            <Link to="/login">
-             <div>
-          <h2 className='font-serif text-xl'>Sign In</h2>
-          <p className='text-sm text-gray-600'>Or create an account</p>
-          </div>
-            </Link>
-          )}
+          </Link>
         </div>
-          
+        <div className="hidden md:flex navbar-center text-[12px]  ">
+          <p>Local Time: {time}</p>
+        </div>
+
+        <div className="navbar-end  text-center">
+          <div className="  ">
+            {User ? (
+              <div className="flex">
+                <div
+                  className="flex ml-4
+               text-white "
+                >
+                  <label tabIndex={0} className=" avatar">
+                    <div className="w-7 h-7 rounded-full  ">
+                      <img title={User?.displayName} src={User?.photoURL} />
+                    </div>
+                  </label>
+                  <p className="text-white font-serif text-sm flex justify-center items-center  ml-1">
+                    {User?.displayName}
+                  </p>
+                </div>
+
+                <button
+                  onClick={handleLogout}
+                  className="ml-4 font-serif w-20 text-white hover:bg-gray-700 rounded-lg"
+                >
+                  LogOut
+                </button>
+              </div>
+            ) : (
+              <Link to="/login">
+                <div>
+                  <h2 className="font-serif text-xl">Sign In</h2>
+                  <p className="text-sm text-gray-600">Or create an account</p>
+                </div>
+              </Link>
+            )}
+          </div>
         </div>
       </div>
-      <hr className='max-w-7xl mx-auto' />
+      <hr className="max-w-7xl mx-auto" />
       <div className="  justify-center hidden lg:flex">
-          <ul className="menu menu-horizontal px-1">
-            {navLinks}
-          </ul>
-        </div>
+        <ul className="menu menu-horizontal px-1">{navLinks}</ul>
+      </div>
     </div>
   );
 };

@@ -35,7 +35,7 @@ const RoomDetails = () => {
     title,
     code
   } = loadedData;
- 
+  
 
   console.log(code)
   console.log(checkout)

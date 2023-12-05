@@ -94,9 +94,9 @@ const Navbar = () => {
                       <img title={User?.displayName} src={User?.photoURL} />
                     </div>
                   </label>
-                  <p className="text-white font-serif text-sm flex justify-center items-center  ml-1">
+                  {/* <p className="text-white font-serif text-sm flex justify-center items-center  ml-1">
                     {User?.displayName}
-                  </p>
+                  </p> */}
                 </div>
 
                 <button

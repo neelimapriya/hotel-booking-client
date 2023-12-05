@@ -16,11 +16,11 @@ const SingleRoomReview = ({ code, title }) => {
   return (
     <div className="mt-10 mb-10">
       <div>
-        <h2 className="text-3xl font-serif font-semibold text-orange-800 text-center underline">
-          Reviews
+        <h2 className="text-3xl font-serif font-semibold text-orange-800 text-center ">
+          Reviews ({review?.length})
         </h2>
       </div>
-      <div className="grid grid-cols-3 max-w-6xl mx-auto">
+      <div className="grid  lg:grid-cols-3 justify-center max-w-6xl mx-auto">
         {review?.map((item) => (
           <div key={item._id}>
             <div className=" ">

@@ -5,10 +5,10 @@
 ### Desrciption
 This is a simple Hotel Booking website. Where user can see Hotel Overview throw
 this site. They can book their preferred rooms in this site. After booking rooms User
-can post reviews for those rooms. I added simple animation in home page.
+can post reviews for those rooms.I added simple animation in home page.
 
 #### Used technology
--React
+- React
 - Firebase
 - AOS
 - Tailwind

@@ -2,9 +2,17 @@
 
 ## Assignment_ID: assignment_category_0004
 
-### 5 feature about my project
- - i have added a news letter where user can subscribe with their email.
- - make my banner unique.
- - i added animation in home page.
- - set  dyanamic title.
- - Use JWT authentication.
+### some feature about my project
+This is a simple Hotel Booking website. Where user can see Hotel Overview throw
+this site. They can book their preferred rooms in this site. After booking rooms User
+can post reviews for those rooms. I added simple animation in home page.
+
+#### Used technology
+-React
+- Firebase
+- AOS
+- Tailwind
+- Daisyui
+- JWT
+- Express 
+- MongoDB.
